@@ -1,36 +1,35 @@
-#Sorting_pkg
-###Problem statement:
-Develop a Python node which subscribe to the /hello (std_msgs/String) topic, sort the letters and publish the result to the /sorted (std_msgs/String) topic. Also create a service which can be called to disable and enable the publisher
+# Sorting_pkg
+### Problem statement:
+" Develop a Python node which subscribe to the /hello (std_msgs/String) topic, sort the letters and publish the result to the /sorted (std_msgs/String) topic. Also create a service which can be called to disable and enable the publisher"
 
-##Compile
+## Compile
 ```
 cd ~/catkin_ws
 catkin_make
 ```
-##Usage
+## Usage
 
-###To start up the node:
+### To start up the node:
 
 ```
 rosrun sort_pkg sorting_node.py
 ```
 
-To publish a string  type this in a separate terminal
+To publish a string  open a terminal and type
 
 ```
 rostopic pub /hello std_msgs/String "data: 'ragesh ramachandran'"
 ```
-To echo the sorted string
+To echo the topic
 ```
 rostopic echo /sort
 ```
-###To start up the node with service :
+### To start up the node with service :
 
 ```
 rosrun sort_pkg sort_node_service.py
 
 ```
-
 To call the service to enable or disbale the sorting process
 
 ```
