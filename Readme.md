@@ -12,7 +12,7 @@ catkin_make
 ### To start up the node:
 
 ```
-rosrun sort_pkg sorting_node.py
+rosrun sorting_pkg sorting_node.py
 ```
 
 To publish a string  open a terminal and type
@@ -27,7 +27,7 @@ rostopic echo /sort
 ### To start up the node with service :
 
 ```
-rosrun sort_pkg sort_node_service.py
+rosrun sorting_pkg sort_node_service.py
 
 ```
 To call the service to enable or disbale the sorting process
@@ -39,3 +39,6 @@ rosservice call /enable_service std_msgs/String "data: '__ service_calls_here___
 Possible service calls are: (case insensitive)
 1. enable
 2. disable
+
+
+This package can give a clear understanding of ROS service concepts.
